@@ -7,15 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		481F192B21FC16E2006894CA /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F192A21FC16E2006894CA /* UITextField+Extensions.swift */; };
+		481F192E21FFF030006894CA /* AccountCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F192D21FFF030006894CA /* AccountCreator.swift */; };
+		481F193021FFF885006894CA /* MoonDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F192F21FFF885006894CA /* MoonDatabase.swift */; };
+		4820ADA421F9951F007891B6 /* AccountCreationPictureSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4820ADA321F9951F007891B6 /* AccountCreationPictureSelectionViewController.swift */; };
+		4820ADA621F9992E007891B6 /* AccountCreationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4820ADA521F9992E007891B6 /* AccountCreationModel.swift */; };
+		4820ADA821F99B86007891B6 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4820ADA721F99B86007891B6 /* String+Extensions.swift */; };
+		482450A12220D15E000202A0 /* AccountCreationLoginDetailsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482450A02220D15E000202A0 /* AccountCreationLoginDetailsTest.swift */; };
+		482AE9AC2224E01500F88CAF /* AccountCreationPhotoDetailsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482AE9AB2224E01500F88CAF /* AccountCreationPhotoDetailsTest.swift */; };
+		482AE9B02227208500F88CAF /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482AE9AF2227208500F88CAF /* UserDefaults.swift */; };
+		482AE9B2222876F700F88CAF /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482AE9B1222876F700F88CAF /* UIAlertController+Extensions.swift */; };
+		482AE9B42229E31A00F88CAF /* AccountCreationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482AE9B32229E31A00F88CAF /* AccountCreationTest.swift */; };
+		482AE9B6222A3CB200F88CAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482AE9B5222A3CB200F88CAF /* LoginViewController.swift */; };
+		482AE9B8222A55D000F88CAF /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482AE9B7222A55D000F88CAF /* LoginManager.swift */; };
+		482AE9C0222B602F00F88CAF /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482AE9BF222B602F00F88CAF /* LoginTest.swift */; };
+		482AE9C8222B606D00F88CAF /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482AE9C7222B606D00F88CAF /* LoginTest.swift */; };
+		482AE9CB222BAF5D00F88CAF /* AccountCredentialsVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482AE9CA222BAF5D00F88CAF /* AccountCredentialsVerifier.swift */; };
+		48690CD721F82D1E0069EC8B /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48690CD621F82D1E0069EC8B /* UIView+Extensions.swift */; };
+		48690CD921F834300069EC8B /* AccountCreationLoginDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48690CD821F834300069EC8B /* AccountCreationLoginDetailsViewController.swift */; };
+		48690CDB21F834F90069EC8B /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48690CDA21F834F90069EC8B /* UIColor+Extensions.swift */; };
 		48EBC62721F6E43B00591FD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EBC62621F6E43B00591FD2 /* AppDelegate.swift */; };
-		48EBC62921F6E43B00591FD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EBC62821F6E43B00591FD2 /* ViewController.swift */; };
 		48EBC62C21F6E43B00591FD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EBC62A21F6E43B00591FD2 /* Main.storyboard */; };
 		48EBC62E21F6E43D00591FD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48EBC62D21F6E43C00591FD2 /* Assets.xcassets */; };
 		48EBC63121F6E43D00591FD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EBC62F21F6E43D00591FD2 /* LaunchScreen.storyboard */; };
 		48EBC63C21F6E43D00591FD2 /* MoonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EBC63B21F6E43D00591FD2 /* MoonTests.swift */; };
+		48EBC64C21F6F2B100591FD2 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EBC64B21F6F2B100591FD2 /* MainScreenViewController.swift */; };
+		48EBC64E21F8261900591FD2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48EBC64D21F8261900591FD2 /* GoogleService-Info.plist */; };
+		861FBD3790FCF20EA5B477CC /* Pods_Moon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C5533E39FD101D0C76982D /* Pods_Moon.framework */; };
+		8B1F7A7FC596C092B9D9FA98 /* Pods_MoonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAA55B83703D903551DD22B /* Pods_MoonTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		482AE9C2222B602F00F88CAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48EBC61B21F6E43B00591FD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48EBC62221F6E43B00591FD2;
+			remoteInfo = Moon;
+		};
 		48EBC63821F6E43D00591FD2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 48EBC61B21F6E43B00591FD2 /* Project object */;
@@ -26,9 +55,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FCABDAB6FFD9ED4B0A202B9 /* Pods-Moon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moon/Pods-Moon.debug.xcconfig"; sourceTree = "<group>"; };
+		3DAA55B83703D903551DD22B /* Pods_MoonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		481F192A21FC16E2006894CA /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		481F192D21FFF030006894CA /* AccountCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreator.swift; sourceTree = "<group>"; };
+		481F192F21FFF885006894CA /* MoonDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonDatabase.swift; sourceTree = "<group>"; };
+		4820ADA321F9951F007891B6 /* AccountCreationPictureSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreationPictureSelectionViewController.swift; sourceTree = "<group>"; };
+		4820ADA521F9992E007891B6 /* AccountCreationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreationModel.swift; sourceTree = "<group>"; };
+		4820ADA721F99B86007891B6 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		482450A02220D15E000202A0 /* AccountCreationLoginDetailsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreationLoginDetailsTest.swift; sourceTree = "<group>"; };
+		482AE9AB2224E01500F88CAF /* AccountCreationPhotoDetailsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreationPhotoDetailsTest.swift; sourceTree = "<group>"; };
+		482AE9AF2227208500F88CAF /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		482AE9B1222876F700F88CAF /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
+		482AE9B32229E31A00F88CAF /* AccountCreationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreationTest.swift; sourceTree = "<group>"; };
+		482AE9B5222A3CB200F88CAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		482AE9B7222A55D000F88CAF /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		482AE9BD222B602F00F88CAF /* LoginTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		482AE9BF222B602F00F88CAF /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
+		482AE9C1222B602F00F88CAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		482AE9C7222B606D00F88CAF /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
+		482AE9CA222BAF5D00F88CAF /* AccountCredentialsVerifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCredentialsVerifier.swift; sourceTree = "<group>"; };
+		48690CD621F82D1E0069EC8B /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		48690CD821F834300069EC8B /* AccountCreationLoginDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreationLoginDetailsViewController.swift; sourceTree = "<group>"; };
+		48690CDA21F834F90069EC8B /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		48EBC62321F6E43B00591FD2 /* Moon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48EBC62621F6E43B00591FD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		48EBC62821F6E43B00591FD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		48EBC62B21F6E43B00591FD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48EBC62D21F6E43C00591FD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48EBC63021F6E43D00591FD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,13 +87,27 @@
 		48EBC63721F6E43D00591FD2 /* MoonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48EBC63B21F6E43D00591FD2 /* MoonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonTests.swift; sourceTree = "<group>"; };
 		48EBC63D21F6E43D00591FD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48EBC64B21F6F2B100591FD2 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		48EBC64D21F8261900591FD2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		563A33DA67C4721978C3CCD9 /* Pods-Moon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moon/Pods-Moon.release.xcconfig"; sourceTree = "<group>"; };
+		5A02FB34331133D9063043D4 /* Pods-MoonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoonTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoonTests/Pods-MoonTests.debug.xcconfig"; sourceTree = "<group>"; };
+		65C5533E39FD101D0C76982D /* Pods_Moon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B32DDDDEAC7D78FA153CC2CD /* Pods-MoonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoonTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoonTests/Pods-MoonTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		482AE9BA222B602F00F88CAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		48EBC62021F6E43B00591FD2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				861FBD3790FCF20EA5B477CC /* Pods_Moon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +115,145 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B1F7A7FC596C092B9D9FA98 /* Pods_MoonTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C3C3CC958A3515BBBE38DA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65C5533E39FD101D0C76982D /* Pods_Moon.framework */,
+				3DAA55B83703D903551DD22B /* Pods_MoonTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		481F192C21FFABD3006894CA /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				481F192F21FFF885006894CA /* MoonDatabase.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		482AE9BE222B602F00F88CAF /* LoginTest */ = {
+			isa = PBXGroup;
+			children = (
+				482AE9BF222B602F00F88CAF /* LoginTest.swift */,
+				482AE9C1222B602F00F88CAF /* Info.plist */,
+			);
+			path = LoginTest;
+			sourceTree = "<group>";
+		};
+		482AE9C9222BAF1D00F88CAF /* Network Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Network Managers";
+			sourceTree = "<group>";
+		};
+		482AE9CC222C36F100F88CAF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				482AE9D1222C391500F88CAF /* View Models */,
+				482AE9D0222C390A00F88CAF /* Views */,
+				482AE9CF222C372300F88CAF /* View Controllers */,
+				482AE9CE222C371500F88CAF /* Network Managers */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		482AE9CD222C370900F88CAF /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				482AE9D5222C39D100F88CAF /* Models */,
+				482AE9D3222C393800F88CAF /* Network Managers */,
+				482AE9D2222C392A00F88CAF /* View Controllers */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		482AE9CE222C371500F88CAF /* Network Managers */ = {
+			isa = PBXGroup;
+			children = (
+				482AE9B7222A55D000F88CAF /* LoginManager.swift */,
+			);
+			path = "Network Managers";
+			sourceTree = "<group>";
+		};
+		482AE9CF222C372300F88CAF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				482AE9B5222A3CB200F88CAF /* LoginViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		482AE9D0222C390A00F88CAF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		482AE9D1222C391500F88CAF /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		482AE9D2222C392A00F88CAF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				48690CD821F834300069EC8B /* AccountCreationLoginDetailsViewController.swift */,
+				4820ADA321F9951F007891B6 /* AccountCreationPictureSelectionViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		482AE9D3222C393800F88CAF /* Network Managers */ = {
+			isa = PBXGroup;
+			children = (
+				481F192D21FFF030006894CA /* AccountCreator.swift */,
+				482AE9CA222BAF5D00F88CAF /* AccountCredentialsVerifier.swift */,
+			);
+			path = "Network Managers";
+			sourceTree = "<group>";
+		};
+		482AE9D5222C39D100F88CAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4820ADA521F9992E007891B6 /* AccountCreationModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		48690CD521F82B570069EC8B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				48690CD621F82D1E0069EC8B /* UIView+Extensions.swift */,
+				48690CDA21F834F90069EC8B /* UIColor+Extensions.swift */,
+				4820ADA721F99B86007891B6 /* String+Extensions.swift */,
+				481F192A21FC16E2006894CA /* UITextField+Extensions.swift */,
+				482AE9AF2227208500F88CAF /* UserDefaults.swift */,
+				482AE9B1222876F700F88CAF /* UIAlertController+Extensions.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		48EBC61A21F6E43B00591FD2 = {
 			isa = PBXGroup;
 			children = (
 				48EBC62521F6E43B00591FD2 /* Moon */,
 				48EBC63A21F6E43D00591FD2 /* MoonTests */,
+				482AE9BE222B602F00F88CAF /* LoginTest */,
 				48EBC62421F6E43B00591FD2 /* Products */,
+				C6450A009F2D232202BEA8B8 /* Pods */,
+				2C3C3CC958A3515BBBE38DA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +262,7 @@
 			children = (
 				48EBC62321F6E43B00591FD2 /* Moon.app */,
 				48EBC63721F6E43D00591FD2 /* MoonTests.xctest */,
+				482AE9BD222B602F00F88CAF /* LoginTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,12 +270,15 @@
 		48EBC62521F6E43B00591FD2 /* Moon */ = {
 			isa = PBXGroup;
 			children = (
-				48EBC62621F6E43B00591FD2 /* AppDelegate.swift */,
-				48EBC62821F6E43B00591FD2 /* ViewController.swift */,
+				482AE9CD222C370900F88CAF /* Registration */,
+				482AE9CC222C36F100F88CAF /* Login */,
+				482AE9C9222BAF1D00F88CAF /* Network Managers */,
+				481F192C21FFABD3006894CA /* Firebase */,
+				48690CD521F82B570069EC8B /* Utility */,
+				48EBC64721F6E89C00591FD2 /* View Controllers */,
+				48EBC64621F6E85600591FD2 /* Supporting Files */,
 				48EBC62A21F6E43B00591FD2 /* Main.storyboard */,
-				48EBC62D21F6E43C00591FD2 /* Assets.xcassets */,
 				48EBC62F21F6E43D00591FD2 /* LaunchScreen.storyboard */,
-				48EBC63221F6E43D00591FD2 /* Info.plist */,
 			);
 			path = Moon;
 			sourceTree = "<group>";
@@ -90,22 +286,76 @@
 		48EBC63A21F6E43D00591FD2 /* MoonTests */ = {
 			isa = PBXGroup;
 			children = (
+				482AE9C7222B606D00F88CAF /* LoginTest.swift */,
+				482AE9B32229E31A00F88CAF /* AccountCreationTest.swift */,
+				482AE9AB2224E01500F88CAF /* AccountCreationPhotoDetailsTest.swift */,
+				482450A02220D15E000202A0 /* AccountCreationLoginDetailsTest.swift */,
 				48EBC63B21F6E43D00591FD2 /* MoonTests.swift */,
 				48EBC63D21F6E43D00591FD2 /* Info.plist */,
 			);
 			path = MoonTests;
 			sourceTree = "<group>";
 		};
+		48EBC64621F6E85600591FD2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48EBC63221F6E43D00591FD2 /* Info.plist */,
+				48EBC62621F6E43B00591FD2 /* AppDelegate.swift */,
+				48EBC62D21F6E43C00591FD2 /* Assets.xcassets */,
+				48EBC64D21F8261900591FD2 /* GoogleService-Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48EBC64721F6E89C00591FD2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				48EBC64B21F6F2B100591FD2 /* MainScreenViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C6450A009F2D232202BEA8B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FCABDAB6FFD9ED4B0A202B9 /* Pods-Moon.debug.xcconfig */,
+				563A33DA67C4721978C3CCD9 /* Pods-Moon.release.xcconfig */,
+				5A02FB34331133D9063043D4 /* Pods-MoonTests.debug.xcconfig */,
+				B32DDDDEAC7D78FA153CC2CD /* Pods-MoonTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		482AE9BC222B602F00F88CAF /* LoginTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 482AE9C4222B602F00F88CAF /* Build configuration list for PBXNativeTarget "LoginTest" */;
+			buildPhases = (
+				482AE9B9222B602F00F88CAF /* Sources */,
+				482AE9BA222B602F00F88CAF /* Frameworks */,
+				482AE9BB222B602F00F88CAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				482AE9C3222B602F00F88CAF /* PBXTargetDependency */,
+			);
+			name = LoginTest;
+			productName = LoginTest;
+			productReference = 482AE9BD222B602F00F88CAF /* LoginTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		48EBC62221F6E43B00591FD2 /* Moon */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48EBC64021F6E43D00591FD2 /* Build configuration list for PBXNativeTarget "Moon" */;
 			buildPhases = (
+				49E031A645BB40106CE7A21C /* [CP] Check Pods Manifest.lock */,
 				48EBC61F21F6E43B00591FD2 /* Sources */,
 				48EBC62021F6E43B00591FD2 /* Frameworks */,
 				48EBC62121F6E43B00591FD2 /* Resources */,
+				A633A3333DD0058DD4B64791 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +370,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48EBC64321F6E43D00591FD2 /* Build configuration list for PBXNativeTarget "MoonTests" */;
 			buildPhases = (
+				6144F91340F363D792BE78F3 /* [CP] Check Pods Manifest.lock */,
 				48EBC63321F6E43D00591FD2 /* Sources */,
 				48EBC63421F6E43D00591FD2 /* Frameworks */,
 				48EBC63521F6E43D00591FD2 /* Resources */,
@@ -144,6 +395,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Kevin Wang";
 				TargetAttributes = {
+					482AE9BC222B602F00F88CAF = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 48EBC62221F6E43B00591FD2;
+					};
 					48EBC62221F6E43B00591FD2 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -168,17 +423,26 @@
 			targets = (
 				48EBC62221F6E43B00591FD2 /* Moon */,
 				48EBC63621F6E43D00591FD2 /* MoonTests */,
+				482AE9BC222B602F00F88CAF /* LoginTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		482AE9BB222B602F00F88CAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		48EBC62121F6E43B00591FD2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				48EBC63121F6E43D00591FD2 /* LaunchScreen.storyboard in Resources */,
 				48EBC62E21F6E43D00591FD2 /* Assets.xcassets in Resources */,
+				48EBC64E21F8261900591FD2 /* GoogleService-Info.plist in Resources */,
 				48EBC62C21F6E43B00591FD2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,13 +456,114 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		49E031A645BB40106CE7A21C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Moon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6144F91340F363D792BE78F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoonTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A633A3333DD0058DD4B64791 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Moon/Pods-Moon-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moon/Pods-Moon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		482AE9B9222B602F00F88CAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				482AE9C0222B602F00F88CAF /* LoginTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		48EBC61F21F6E43B00591FD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48EBC62921F6E43B00591FD2 /* ViewController.swift in Sources */,
+				482AE9B6222A3CB200F88CAF /* LoginViewController.swift in Sources */,
+				48690CD721F82D1E0069EC8B /* UIView+Extensions.swift in Sources */,
+				481F192E21FFF030006894CA /* AccountCreator.swift in Sources */,
+				4820ADA421F9951F007891B6 /* AccountCreationPictureSelectionViewController.swift in Sources */,
+				482AE9CB222BAF5D00F88CAF /* AccountCredentialsVerifier.swift in Sources */,
+				48690CDB21F834F90069EC8B /* UIColor+Extensions.swift in Sources */,
+				482AE9B8222A55D000F88CAF /* LoginManager.swift in Sources */,
+				4820ADA621F9992E007891B6 /* AccountCreationModel.swift in Sources */,
+				4820ADA821F99B86007891B6 /* String+Extensions.swift in Sources */,
 				48EBC62721F6E43B00591FD2 /* AppDelegate.swift in Sources */,
+				482AE9B2222876F700F88CAF /* UIAlertController+Extensions.swift in Sources */,
+				481F192B21FC16E2006894CA /* UITextField+Extensions.swift in Sources */,
+				482AE9B02227208500F88CAF /* UserDefaults.swift in Sources */,
+				48690CD921F834300069EC8B /* AccountCreationLoginDetailsViewController.swift in Sources */,
+				48EBC64C21F6F2B100591FD2 /* MainScreenViewController.swift in Sources */,
+				481F193021FFF885006894CA /* MoonDatabase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,12 +572,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				48EBC63C21F6E43D00591FD2 /* MoonTests.swift in Sources */,
+				482AE9AC2224E01500F88CAF /* AccountCreationPhotoDetailsTest.swift in Sources */,
+				482AE9B42229E31A00F88CAF /* AccountCreationTest.swift in Sources */,
+				482AE9C8222B606D00F88CAF /* LoginTest.swift in Sources */,
+				482450A12220D15E000202A0 /* AccountCreationLoginDetailsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		482AE9C3222B602F00F88CAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48EBC62221F6E43B00591FD2 /* Moon */;
+			targetProxy = 482AE9C2222B602F00F88CAF /* PBXContainerItemProxy */;
+		};
 		48EBC63921F6E43D00591FD2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 48EBC62221F6E43B00591FD2 /* Moon */;
@@ -240,6 +614,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		482AE9C5222B602F00F88CAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C59S222Q28;
+				INFOPLIST_FILE = LoginTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinkongwang.LoginTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moon.app/Moon";
+			};
+			name = Debug;
+		};
+		482AE9C6222B602F00F88CAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C59S222Q28;
+				INFOPLIST_FILE = LoginTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinkongwang.LoginTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moon.app/Moon";
+			};
+			name = Release;
+		};
 		48EBC63E21F6E43D00591FD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -358,11 +772,12 @@
 		};
 		48EBC64121F6E43D00591FD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FCABDAB6FFD9ED4B0A202B9 /* Pods-Moon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C59S222Q28;
-				INFOPLIST_FILE = Moon/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Moon/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,11 +791,12 @@
 		};
 		48EBC64221F6E43D00591FD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 563A33DA67C4721978C3CCD9 /* Pods-Moon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C59S222Q28;
-				INFOPLIST_FILE = Moon/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Moon/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,6 +810,7 @@
 		};
 		48EBC64421F6E43D00591FD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A02FB34331133D9063043D4 /* Pods-MoonTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +832,7 @@
 		};
 		48EBC64521F6E43D00591FD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B32DDDDEAC7D78FA153CC2CD /* Pods-MoonTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -437,6 +855,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		482AE9C4222B602F00F88CAF /* Build configuration list for PBXNativeTarget "LoginTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				482AE9C5222B602F00F88CAF /* Debug */,
+				482AE9C6222B602F00F88CAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		48EBC61E21F6E43B00591FD2 /* Build configuration list for PBXProject "Moon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
