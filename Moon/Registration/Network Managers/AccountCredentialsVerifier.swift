@@ -9,25 +9,30 @@
 import Foundation
 import Firebase
 
-class AccountCredentialsVerifier {
+class AccountCredentialsVerifier : CredentialsVerifier {
     
-    typealias Completion = (Bool, Error?) -> Void
+    private let authenticator : CredentialsVerifier
+    
+    init(authenticator : CredentialsVerifier = Auth.auth()) {
+        self.authenticator = authenticator
+    }
     
     func checkEmailForValidity(emailToCheck : String, withHandler completionHandler: @escaping Completion) {
   
-        Auth.auth().fetchProviders(forEmail: emailToCheck) { (returnedStrings, error) in
+        authenticator.checkEmailForValidity(emailToCheck: emailToCheck) { (returnedStrings, error) in
             
-            guard error == nil else {
-                completionHandler(false, error!)
-                return
-            }
-            
-            if returnedStrings == nil {
-                completionHandler(false, nil)
-            } else {
-                completionHandler(true, nil)
-            }
+                guard error == nil else {
+                    completionHandler(nil, error!)
+                    return
+                }
+                
+                if returnedStrings != nil {
+                    completionHandler(returnedStrings!, nil)
+                } else {
+                    completionHandler(nil, nil)
+                }
         }
     }
     
 }
+

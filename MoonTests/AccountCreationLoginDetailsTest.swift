@@ -15,8 +15,10 @@ class AccountCreationLoginDetailsTest: XCTestCase {
 
     override func setUp() {
         super.setUp()
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         accountCreationLoginDetailsVC = (storyboard.instantiateViewController(withIdentifier: "Account Creation Credentials") as! AccountCreationLoginDetailsViewController)
+        
         accountCreationLoginDetailsVC.loadView()
     }
 
@@ -43,6 +45,10 @@ class AccountCreationLoginDetailsTest: XCTestCase {
         
         // Then
         XCTAssert(validUserInput, "Account creation is accepting not accepting valid user inputs for account creation")
+        XCTAssert(accountCreationLoginDetailsVC.nameErrorLabelIsHidden, "User name error label is still visible")
+        XCTAssert(accountCreationLoginDetailsVC.emailErrorLabelIsHidden, "Email error label is still visible")
+        XCTAssert(accountCreationLoginDetailsVC.emailErrorLabelIsHidden, "Email in use error label is still visible")
+        XCTAssert(accountCreationLoginDetailsVC.passwordErrorLabelIsHidden, "Password error label is still visible ")
     }
     
     func testInvalidUserInput() {

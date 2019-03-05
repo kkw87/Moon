@@ -36,9 +36,9 @@ class LoginViewController: UIViewController {
     private var emailLabelIsHidden = true {
         didSet {
             if emailLabelIsHidden {
-                emailErrorLabel.hideOver(duration: AnimationConstants.DefaultInterval)
+                emailErrorLabel?.hideOver(duration: AnimationConstants.DefaultInterval)
             } else {
-                emailErrorLabel.showOver(duration: AnimationConstants.DefaultInterval)
+                emailErrorLabel?.showOver(duration: AnimationConstants.DefaultInterval)
             }
         }
     }
@@ -46,9 +46,9 @@ class LoginViewController: UIViewController {
     private var passwordLabelIsHidden = true {
         didSet {
             if passwordLabelIsHidden {
-                passwordErrorLabel.hideOver(duration: AnimationConstants.DefaultInterval)
+                passwordErrorLabel?.hideOver(duration: AnimationConstants.DefaultInterval)
             } else {
-                passwordErrorLabel.showOver(duration: AnimationConstants.DefaultInterval)
+                passwordErrorLabel?.showOver(duration: AnimationConstants.DefaultInterval)
             }
         }
     }
@@ -125,15 +125,18 @@ class LoginViewController: UIViewController {
         
     }
     
-    private func validInput(loginEmail : String?, loginPassword : String?) -> Bool {
+    func validInput(loginEmail : String?, loginPassword : String?) -> Bool {
         
-        if loginEmail == nil || loginEmail!.count == 0 {
+        if loginEmail == nil || loginEmail!.count == 0 || !loginEmail!.isValidEmail() {
             emailLabelIsHidden = false
             return false
         } else if loginPassword == nil || loginPassword!.count == 0 {
             passwordLabelIsHidden = false
             return false
         }
+        
+        emailLabelIsHidden = true
+        passwordLabelIsHidden = true
         
         return true
         

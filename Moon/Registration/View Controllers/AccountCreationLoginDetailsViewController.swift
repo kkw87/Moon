@@ -88,9 +88,9 @@ class AccountCreationLoginDetailsViewController: UIViewController {
     
     private let textFieldTags = [0 : TextFieldType.NameTextField, 1 : TextFieldType.EmailTextField, 2 : TextFieldType.PasswordTextField]
     
-    private let accountVerifier = AccountCredentialsVerifier()
+    private let accountVerifier = AccountCredentialsVerifier(authenticator: Auth.auth())
     
-    private var nameErrorLabelIsHidden = true {
+    private(set) var nameErrorLabelIsHidden = true {
         didSet {
             if nameErrorLabelIsHidden {
                 nameErrorLabel.hideOver(duration: AnimationConstants.DefaultInterval)
@@ -100,7 +100,7 @@ class AccountCreationLoginDetailsViewController: UIViewController {
         }
     }
     
-    private var emailErrorLabelIsHidden = true {
+    private(set) var emailErrorLabelIsHidden = true {
         didSet {
             if emailErrorLabelIsHidden {
                 emailErrorLabel.hideOver(duration: AnimationConstants.DefaultInterval)
@@ -111,7 +111,7 @@ class AccountCreationLoginDetailsViewController: UIViewController {
         }
     }
     
-    private var emailInUseErrorLabelIsHidden = true {
+    private(set) var emailInUseErrorLabelIsHidden = true {
         didSet {
             if emailInUseErrorLabelIsHidden {
                 emailInUseLabel.hideOver(duration: AnimationConstants.DefaultInterval)
@@ -122,7 +122,7 @@ class AccountCreationLoginDetailsViewController: UIViewController {
         }
     }
     
-    private var passwordErrorLabelIsHidden = true {
+    private(set) var passwordErrorLabelIsHidden = true {
         didSet {
             if passwordErrorLabelIsHidden {
                 passwordErrorLabel.hideOver(duration: AnimationConstants.DefaultInterval)
@@ -178,25 +178,28 @@ class AccountCreationLoginDetailsViewController: UIViewController {
         
         SVProgressHUD.show()
         
-        accountVerifier.checkEmailForValidity(emailToCheck:userEmail) { [weak self] (completed, error) in
+        accountVerifier.checkEmailForValidity(emailToCheck: userEmail) {[weak self] (existingUsers, error) in
+            
             DispatchQueue.main.async {
                 SVProgressHUD.dismiss()
             }
             
-            if completed {
-                self?.performSegue(withIdentifier: Storyboard.PictureSegue, sender: nil)
-            } else {
-                let errorAlertVC : UIAlertController
-                if let networkError = error {
-                    errorAlertVC = UIAlertController(error: networkError)
-                } else {
-                    errorAlertVC = UIAlertController()
-                }
-                
+            guard error == nil else {
+                let errorAlertVC = UIAlertController(error: error!)
                 self?.present(errorAlertVC, animated: true, completion: nil)
-
+                return
             }
+            
+            guard existingUsers == nil else {
+                let existingUserAlertVC = UIAlertController(message: "The email address is currently in use", tintColor : nil)
+                self?.present(existingUserAlertVC, animated: true, completion: nil)
+                return
+            }
+            
+            self?.performSegue(withIdentifier: Storyboard.PictureSegue, sender: nil)
+            
         }
+        
 
     }
     // MARK: - UI Functions

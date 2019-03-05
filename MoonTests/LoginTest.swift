@@ -15,7 +15,8 @@ class LoginTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        loginVC = LoginViewController()
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        loginVC = (storyBoard.instantiateViewController(withIdentifier: "Login") as! LoginViewController)
     }
 
     override func tearDown() {
@@ -23,16 +24,24 @@ class LoginTest: XCTestCase {
         super.tearDown()
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testValidInput() {
+        let validLoginName = "tester123@gmail.com"
+        let validLoginPassword = "1234567"
+        
+        let inputResults = loginVC.validInput(loginEmail: validLoginName, loginPassword: validLoginPassword)
+        
+        XCTAssert(inputResults, "A valid user name and password is being rejected")
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testInvalidInput() {
+        let invalidLoginName = "tester123"
+        let invalidPassword = "123"
+        
+        let emptyLoginName = ""
+        let emptyPassword = ""
+        
+        XCTAssertFalse(loginVC.validInput(loginEmail: invalidLoginName, loginPassword: invalidPassword), "User name not in email format is being accepted and a password less than seven characters is being accepted")
+        XCTAssertFalse(loginVC.validInput(loginEmail: emptyLoginName , loginPassword: emptyPassword), "An empty login name and empty password is being accepted")
     }
 
 }

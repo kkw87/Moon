@@ -43,8 +43,8 @@ class AccountCreationPictureSelectionViewController: UIViewController {
     
     var userProfileImage : UIImage? {
         didSet {
-            pictureSelectionButton.setBackgroundImage(userProfileImage, for: .normal)
-                pictureSelectionButton.setTitle("", for: .normal)
+            pictureSelectionButton?.setBackgroundImage(userProfileImage, for: .normal)
+                pictureSelectionButton?.setTitle("", for: .normal)
         }
     }
     
@@ -61,22 +61,22 @@ class AccountCreationPictureSelectionViewController: UIViewController {
     }()
     
     
-    private var displayNameErrorLabelIsHidden = true {
+    private(set) var displayNameErrorLabelIsHidden = true {
         didSet {
             if displayNameErrorLabelIsHidden {
-                displayNameErrorLabel.hideOver(duration: AnimationConstants.ErrorLabelFadeOutTime)
+                displayNameErrorLabel?.hideOver(duration: AnimationConstants.ErrorLabelFadeOutTime)
             } else {
-                displayNameErrorLabel.showOver(duration: AnimationConstants.ErrorLabelFadeInTime)
+                displayNameErrorLabel?.showOver(duration: AnimationConstants.ErrorLabelFadeInTime)
             }
         }
     }
     
-    private var profilePictureErrorLabelIsHidden = true {
+    private(set) var profilePictureErrorLabelIsHidden = true {
         didSet {
             if profilePictureErrorLabelIsHidden {
-                noProfilePIctureSelectedErrorLabel.hideOver(duration: AnimationConstants.ErrorLabelFadeOutTime)
+                noProfilePIctureSelectedErrorLabel?.hideOver(duration: AnimationConstants.ErrorLabelFadeOutTime)
             } else {
-                noProfilePIctureSelectedErrorLabel.showOver(duration: AnimationConstants.ErrorLabelFadeInTime)
+                noProfilePIctureSelectedErrorLabel?.showOver(duration: AnimationConstants.ErrorLabelFadeInTime)
             }
         }
     }
@@ -143,8 +143,9 @@ class AccountCreationPictureSelectionViewController: UIViewController {
             DispatchQueue.main.async {
                 SVProgressHUD.dismiss()
             }
-        
+
             guard error == nil else {
+                print(error!.localizedDescription)
                 DispatchQueue.main.async {
                     let errorAlertVC = UIAlertController(error: error!)
                     self.present(errorAlertVC, animated: true, completion: nil)
@@ -153,6 +154,7 @@ class AccountCreationPictureSelectionViewController: UIViewController {
             }
             
             guard completed else {
+                print(completed)
                 DispatchQueue.main.async {
                     let defaultErrorAlertVC = UIAlertController(tintColor: nil)
                     self.present(defaultErrorAlertVC, animated: true, completion: nil)
@@ -176,12 +178,7 @@ class AccountCreationPictureSelectionViewController: UIViewController {
     @objc func userTappedBackground() {
         displayNameTextField.resignFirstResponder()
     }
-    
-    private func errorCreatingUsingAccount(withMessage : String?) {
-        let errorAlertVC = UIAlertController(title: StringConstants.AccountCreationAlertTitle, message: withMessage ?? StringConstants.DefaultAccountCreationAlertMessage, preferredStyle: .alert)
-        errorAlertVC.addAction(UIAlertAction(title: StringConstants.AccountCreationAlertOkayButton, style: .default, handler: nil))
-        present(errorAlertVC, animated: true, completion: nil)
-    }
+
     
     // MARK: - Input validation
     func checkForValidInput(userName : String?) -> Bool {
@@ -199,6 +196,9 @@ class AccountCreationPictureSelectionViewController: UIViewController {
             profilePictureErrorLabelIsHidden = false
             return false 
         }
+        
+        displayNameErrorLabelIsHidden = true
+        profilePictureErrorLabelIsHidden = true 
         
         
         return true

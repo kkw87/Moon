@@ -12,7 +12,7 @@ import XCTest
 var accountCreationPhotoDetailsVC : AccountCreationPictureSelectionViewController!
 
 class AccountCreationPhotoDetailsTest: XCTestCase {
-
+    
     override func setUp() {
         super.setUp()
         
@@ -21,36 +21,43 @@ class AccountCreationPhotoDetailsTest: XCTestCase {
         
         
     }
-
+    
     override func tearDown() {
         accountCreationPhotoDetailsVC = nil
         super.tearDown()
     }
     
-    func testValidUserName() {
+    func testValidInput() {
         
         let validDisplayName = "Tester Account"
-        let invalidDisplayName = ""
-        let nilDisplayName : String? = nil
         accountCreationPhotoDetailsVC.userProfileImage = UIImage()
-        
+
         let validResults = accountCreationPhotoDetailsVC.checkForValidInput(userName: validDisplayName)
+        
+        
+        XCTAssert(validResults, "Account creation is rejecting a valid user display name")
+        XCTAssert(accountCreationPhotoDetailsVC.displayNameErrorLabelIsHidden, "Display name error label is still visible")
+        XCTAssert(accountCreationPhotoDetailsVC.profilePictureErrorLabelIsHidden, "Profile picture error label is still visible")
+
+    }
+    
+    func testInvalidInput() {
+        
+        let invalidDisplayName = ""
+        accountCreationPhotoDetailsVC.userProfileImage = UIImage()
         
         let invalidResults = accountCreationPhotoDetailsVC.checkForValidInput(userName: invalidDisplayName)
         
-        XCTAssert(validResults, "Account creation is rejecting a valid user display name")
-        
         XCTAssertFalse(invalidResults, "Account creation is accepting a blank display name")
         
-        XCTAssertFalse(accountCreationPhotoDetailsVC.checkForValidInput(userName: nil), "Account creation accepts a nil value")
     }
     
     func testUserImageSelection() {
         
-            let testImage = UIImage()
+        let testImage = UIImage()
         accountCreationPhotoDetailsVC.imagePickerController(accountCreationPhotoDetailsVC.photoVC, didFinishPickingMediaWithInfo: [UIImagePickerController.InfoKey.originalImage : testImage])
         
         
-            XCTAssert(accountCreationPhotoDetailsVC.userProfileImage == testImage, "The user selected image is not saved in the userProfileImage variable")
+        XCTAssert(accountCreationPhotoDetailsVC.userProfileImage == testImage, "The user selected image is not saved in the userProfileImage variable")
     }
 }

@@ -67,8 +67,8 @@ class AccountCreator {
             }
         }
         
-    MoonDatabase.UserRootReference.child(withUID).child(UserKeys.UserName).setValue(user.userName)
-    MoonDatabase.UserRootReference.child(withUID).child(UserKeys.UserDisplayName).setValue(user.userDisplayName)
+        MoonDatabase.UserRootReference.child(withUID).child(UserKeys.UserName).setValue(user.userName)
+        MoonDatabase.UserRootReference.child(withUID).child(UserKeys.UserDisplayName).setValue(user.userDisplayName)
         
     }
     
