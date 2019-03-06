@@ -50,7 +50,7 @@ class AccountCreationPictureSelectionViewController: UIViewController {
     
     // MARK: - Instance variable
     
-    private(set) var accountCreator = AccountCreator()
+    private(set) var accountCreator = AccountCreatorModel()
     
     private(set) lazy var photoVC : UIImagePickerController = {
         let imagePickerVC = UIImagePickerController()
@@ -137,13 +137,13 @@ class AccountCreationPictureSelectionViewController: UIViewController {
         
         SVProgressHUD.show()
         
-        let newUserInformation = AccountCreationModel(userName: userName!, emailAddress: userEmail!, password: userPassword!, userPhoto: userProfileImage, userDisplayName: displayNameTextField.text!)
+        let newUserInformation = UserCreationModel(userName: userName!, emailAddress: userEmail!, password: userPassword!, userPhoto: userProfileImage, userDisplayName: displayNameTextField.text!)
         
         accountCreator.createUser(withUser: newUserInformation) { (completed, error) in
             DispatchQueue.main.async {
                 SVProgressHUD.dismiss()
             }
-
+            
             guard error == nil else {
                 print(error!.localizedDescription)
                 DispatchQueue.main.async {
@@ -154,14 +154,13 @@ class AccountCreationPictureSelectionViewController: UIViewController {
             }
             
             guard completed else {
-                print(completed)
                 DispatchQueue.main.async {
                     let defaultErrorAlertVC = UIAlertController(tintColor: nil)
                     self.present(defaultErrorAlertVC, animated: true, completion: nil)
                 }
                 return
             }
-        
+            
             //Save user defaults with email and password
             UserDefaults.standard.userCredentials = (newUserInformation.emailAddress, newUserInformation.password)
             self.performSegue(withIdentifier: Storyboard.AccountCreationSegue, sender: nil)

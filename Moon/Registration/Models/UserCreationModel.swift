@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct AccountCreationModel {
+struct UserCreationModel {
     
     let userName : String
     let emailAddress : String
